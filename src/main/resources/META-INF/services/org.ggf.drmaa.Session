@@ -1,0 +1,2 @@
+# Loads the PBS session by default
+org.biouno.drmaa.pbs.PbsSession

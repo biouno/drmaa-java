@@ -21,27 +21,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.biouno.drmaa;
-
-import org.biouno.drmaa.util.ServiceLoaderHelper;
-import org.ggf.drmaa.Session;
 
 /**
- * A session factory used to create {#Session}s for different batch servers. Implements the DRMAA {#link
- * org.ggf.drmaa.SessionFactory} abstract class.
+ * Utility classes. Not supposed to be used by external libraries, i.e., **internal
+ * use only**. No backward compatibility.
  *
  * @author Bruno P. Kinoshita
  * @since 0.1
  */
-public class SessionFactory extends org.ggf.drmaa.SessionFactory {
-
-    /*
-     * (non-Javadoc)
-     * @see org.ggf.drmaa.SessionFactory#getSession()
-     */
-    @Override
-    public Session getSession() {
-        return ServiceLoaderHelper.loadImplementation(Session.class);
-    }
-
-}
+package org.biouno.drmaa.util;

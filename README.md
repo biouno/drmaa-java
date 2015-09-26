@@ -55,3 +55,7 @@ The XML files are parsed with [XStream](http://x-stream.github.io/). There is an
 ### Connecting to servers
 
 Connection to server is handled by [XebiaLabs' overthere library](https://github.com/xebialabs/overthere). The type of connection (SSH, local, scp, su) is decided based on the contact string, passed in the Session#init method. This method has the same signature as defined in the [DRMAA](http://drmaa.org) reference implementation, though we use the contact string with a different purpose.
+
+### Logging
+
+Logging is done via JUL. TODO: explain how to customise log levels, output, etc

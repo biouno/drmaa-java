@@ -24,7 +24,10 @@
 package org.biouno.drmaa.pbs;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+import org.apache.commons.lang.NotImplementedException;
 import org.ggf.drmaa.DrmaaException;
 import org.ggf.drmaa.JobInfo;
 import org.ggf.drmaa.JobTemplate;
@@ -32,99 +35,117 @@ import org.ggf.drmaa.Session;
 import org.ggf.drmaa.Version;
 
 /**
+ * <p>
  * A PBS DRMAA {#link Session}.
- *
+ * </p>
+ * <p>
  * TODO: example code
+ * </p>
  *
  * @author Bruno P. Kinoshita
  * @since 0.1
  */
 public class PbsSession implements Session {
 
+    /*
+     * --- constants
+     */
+    private static final String DRM_SYSTEM = "PBS";
+
+    private static final Version DRM_VERSION = new Version(1, 0);
+
+    private static final Logger LOGGER = Logger.getLogger(PbsSession.class.getName());
+
+    /*
+     * --- member attributes
+     */
+    private String contact;
+
+    public PbsSession() {
+        super();
+        if (LOGGER.isLoggable(Level.FINEST)) {
+            LOGGER.log(Level.FINEST, "Created a new instance of PbsSession");
+        }
+    }
+
+    /*
+     * --- spec methods
+     */
+
+    /*
+     * (non-Javadoc)
+     * @see org.ggf.drmaa.Session#control(java.lang.String, int)
+     */
     @Override
     public void control(String arg0, int arg1) throws DrmaaException {
-        // TODO Auto-generated method stub
-
+        throw new NotImplementedException();
     }
 
     @Override
     public JobTemplate createJobTemplate() throws DrmaaException {
-        // TODO Auto-generated method stub
-        return null;
+        throw new NotImplementedException();
     }
 
     @Override
     public void deleteJobTemplate(JobTemplate arg0) throws DrmaaException {
-        // TODO Auto-generated method stub
-
+        throw new NotImplementedException();
     }
 
     @Override
     public void exit() throws DrmaaException {
-        // TODO Auto-generated method stub
-
+        throw new NotImplementedException();
     }
 
     @Override
     public String getContact() {
-        // TODO Auto-generated method stub
-        return null;
+        return this.contact;
     }
 
     @Override
     public String getDrmSystem() {
-        // TODO Auto-generated method stub
-        return null;
+        return DRM_SYSTEM;
     }
 
     @Override
     public String getDrmaaImplementation() {
-        // TODO Auto-generated method stub
-        return null;
+        return getDrmSystem();
     }
 
     @Override
     public int getJobProgramStatus(String arg0) throws DrmaaException {
-        // TODO Auto-generated method stub
-        return 0;
+        throw new NotImplementedException();
     }
 
     @Override
     public Version getVersion() {
-        // TODO Auto-generated method stub
-        return null;
+        return DRM_VERSION;
     }
 
     @Override
-    public void init(String arg0) throws DrmaaException {
-        // TODO Auto-generated method stub
-
+    public void init(String contact) throws DrmaaException {
+        this.contact = contact;
     }
 
-    @SuppressWarnings("rawtypes") // from the DRMAA spec
+    @SuppressWarnings("rawtypes")              // from the DRMAA impl
     @Override
     public List runBulkJobs(JobTemplate arg0, int arg1, int arg2, int arg3) throws DrmaaException {
-        // TODO Auto-generated method stub
-        return null;
+        throw new NotImplementedException();
     }
 
     @Override
     public String runJob(JobTemplate arg0) throws DrmaaException {
-        // TODO Auto-generated method stub
-        return null;
+        throw new NotImplementedException();
     }
 
-    @SuppressWarnings("rawtypes") // from the DRMAA spec
+    @SuppressWarnings("rawtypes")             // from the DRMAA impl
     @Override
     public void synchronize(List arg0, long arg1, boolean arg2) throws DrmaaException {
-        // TODO Auto-generated method stub
-
+        throw new NotImplementedException();
     }
 
     @Override
     public JobInfo wait(String arg0, long arg1) throws DrmaaException {
-        // TODO Auto-generated method stub
-        return null;
+        throw new NotImplementedException();
     }
 
 }
