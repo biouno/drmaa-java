@@ -1,5 +1,7 @@
 This project provides a Java implementation of the [DRMAA](http://www.drmaa.org/) specification. It provides a thin layer around command line executables as `qsub` and `qstat`. Users can choose to run these commands in the same computer where the Java code is being executed, or run them via SSH. The SSH support is provided by the [XebiaLabs overthere library](https://github.com/xebialabs/overthere), which means that some of its features a propagated tot he library (e.g. SSH [jump stations](https://en.wikipedia.org/wiki/Jump_server) support).
 
+A look at [pbs-java-api](https://github.com/biouno/pbs-java-api) and [drmaa-pbs](https://github.com/biouno/drmaa-pbs) may be helpful to understand how and why this API was created. pbs-java-api was the first created, in order to be used in the [PBS Plug-in](https://github.com/biouno/pbs-plugin) for Jenkins. Later users requested that the plug-in supported other batch servers, and then we decided to use the drmaa-pbs as a test bed implementation. This is the result API, based on the work done and tested in the past.
+
 ## Basic usage
 
 (WIP)
@@ -31,6 +33,10 @@ This project provides a Java implementation of the [DRMAA](http://www.drmaa.org/
 ### Using with Univa Grid Engine
 
 (WIP)
+
+### Using with a custom Java driver
+
+(WIP) - see Service Loader in 52North SOS
 
 ## Development
 
