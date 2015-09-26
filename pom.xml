@@ -1,0 +1,123 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.biouno</groupId>
+	<artifactId>drmaa-java</artifactId>
+	<version>0.1-SNAPSHOT</version>
+
+	<name>DRMAA Java</name>
+	<description>Java implementation for DRMAA applications</description>
+
+	<url>https://github.com/biouno/drmaa-java</url>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>kinow</id>
+			<email>brunodepaulak@yahoo.com.br</email>
+			<name>Bruno P. Kinoshita</name>
+			<timezone>-3</timezone>
+			<url>http://www.kinoshita.eti.br</url>
+			<organization>TupiLabs</organization>
+			<organizationUrl>http://www.tupilabs.com</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/biouno/drmaa-java</url>
+		<connection>scm:git:git://github.com/biouno/drmaa-java.git</connection>
+		<developerConnection>scm:git:git@github.com:biouno/drmaa-java.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.6</java.version>
+	</properties>
+
+	<inceptionYear>2015</inceptionYear>
+
+	<organization>
+		<name>BioUno</name>
+		<url>http://www.biouno.org</url>
+	</organization>
+
+	<issueManagement>
+		<url>https://github.com/biouno/drmaa-java/issues</url>
+		<system>GitHub</system>
+	</issueManagement>
+
+	<ciManagement>
+		<url>https://buildhive.cloudbees.com/job/biouno/job/drmaa-java/</url>
+		<system>Jenkins</system>
+	</ciManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>us.levk</groupId>
+			<artifactId>drmaa-common</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-exec</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.xebialabs.overthere</groupId>
+			<artifactId>overthere</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.8</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>findbugs</groupId>
+			<artifactId>annotations</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
